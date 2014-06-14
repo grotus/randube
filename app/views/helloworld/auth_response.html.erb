@@ -1,0 +1,24 @@
+<% if user_signed_in? %>
+	<p>Current user: <%= current_user.email %> </p>
+<% else %>
+	<p>You are not signed in. Shame. Click here: <%= link_to 'Sign in', new_user_session_path %> </p>
+<% end %>
+
+
+<% if !@result.blank? %>
+	<p><%= @result.count %> results</p>
+
+	<hr>
+
+	<p> <%= @result.first.to_json %> </p>
+
+	<hr>
+  <% for item in @result %>
+    <p>
+    	<div><%= link_to item.title, item.media_content.first.url, :target => "_blank" %></div>
+    	<div><%= item.description %></div>
+    </p>
+  <% end %>
+<% else %>
+  
+<% end %>
