@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'angularjs-rails'
 gem 'devise'
 gem 'youtube_it'
 
