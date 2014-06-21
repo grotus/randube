@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'angular-rails-templates'
 gem 'angularjs-rails'
 gem 'devise'
 gem 'youtube_it'

@@ -15,5 +15,13 @@
 // require turbolinks // turbolinks and angular might conflict
 
 //= require angular
+//= require angular-route
+//= require angular/main
+
+//= require angular-rails-templates
+//
+// Templates in app/assets/javascript/templates
+// remember to set this to the ignored prefix in application.rb
+//= require_tree ./angular/templates
 
 //= require_tree .

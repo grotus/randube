@@ -19,5 +19,10 @@ module Randube
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
+
+    # The default value is
+    # config.angular_templates.ignore_prefix  = 'templates/'
+    # Changed it in order to keep angular assets under one folder
+    config.angular_templates.ignore_prefix  = 'angular/templates/'
   end
 end

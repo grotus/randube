@@ -16,11 +16,11 @@ class HelloworldController < ApplicationController
 
 	def index
 
-		authdata = HelloworldController::GOOGLE_APP_DATA
+		#authdata = HelloworldController::GOOGLE_APP_DATA
 
 
-		redirect_url = oauth2callback_url
-		redirect_to "#{authdata[:auth_uri]}?client_id=#{authdata[:client_id]}&redirect_uri=#{redirect_url}&scope=https://gdata.youtube.com&response_type=code&access_type=offline"
+		#redirect_url = oauth2callback_url
+		#redirect_to "#{authdata[:auth_uri]}?client_id=#{authdata[:client_id]}&redirect_uri=#{redirect_url}&scope=https://gdata.youtube.com&response_type=code&access_type=offline"
 	end
 
 	def auth_response
