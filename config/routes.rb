@@ -5,6 +5,14 @@ Rails.application.routes.draw do
 
   get 'oauth2callback' => 'helloworld#auth_response'
 
+  namespace :api, defaults: {format: :json} do
+    resources :channels, only: [:index] do
+    end
+    resources :task_lists, only: [:index] do
+      resources :tasks, only: [:index, :create, :update, :destroy]
+    end
+  end
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

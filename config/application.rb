@@ -24,5 +24,12 @@ module Randube
     # config.angular_templates.ignore_prefix  = 'templates/'
     # Changed it in order to keep angular assets under one folder
     config.angular_templates.ignore_prefix  = 'angular/templates/'
+
+
+    # Devise doesn't respond to json by default, so enable that here
+    # (is this outdated information?)
+    config.to_prepare do
+       DeviseController.respond_to :html, :json
+    end
   end
 end
